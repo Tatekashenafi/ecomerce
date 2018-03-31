@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { LinkComponent } from './link/link.component';
 
 
 @NgModule({
@@ -14,13 +15,16 @@ import { AboutComponent } from './about/about.component';
                   AppComponent,
                   ToolBarComponent,
                   HomeComponent,
-                  AboutComponent
+                  AboutComponent,
+                  LinkComponent
                 ],
   imports: [
               BrowserModule,
               RouterModule.forRoot([
                                       {path: '', component: HomeComponent},
-                                      {path: 'About', component: AboutComponent}
+                                      {path: 'Home', component: HomeComponent},
+                                      {path: 'About', component: AboutComponent},
+                                      {path: 'Links', component: LinkComponent}
                                     ])
            ],
   providers: [
