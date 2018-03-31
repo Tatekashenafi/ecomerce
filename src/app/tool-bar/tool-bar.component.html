@@ -4,9 +4,9 @@
       class="navbar-brand"
       routerLink=""
     >
-      <img src="/assets/logo.png">
+      <img height="40px" src="/assets/logo.png">
     </a>
-    
+
     <ul class="nav nav-pills navbar-nav mr-auto mt-auto">
       <li class="nav-item">
         <a
@@ -32,10 +32,13 @@
         >About</a>
       </li>
 
-      <li class="nav-item dropdown">
+      <li
+        ngbDropdown="ngbDropdown"
+        class="nav-item"
+      >
         <a
-          class="nav-link dropdown-toggle"
-          href="http://example.com"
+          class="nav-link"
+          ngbDropdownToggle="ngbDropdownToggle"
           id="dropdown03"
           data-toggle="dropdown"
           aria-haspopup="true"
@@ -43,7 +46,7 @@
         >Dropdown</a>
 
         <div
-          class="dropdown-menu"
+          ngbDropdownMenu="ngbDropdownMenu"
           aria-labelledby="dropdown03"
         >
           <a
@@ -67,7 +70,7 @@
       </li>
     </ul>
 
-    <div  class="ml-auto mt-auto">
+    <div class="ml-auto mt-auto">
       <form class="form-inline my-2 my-md-0">
         <input
           class="form-control"
