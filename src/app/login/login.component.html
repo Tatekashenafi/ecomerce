@@ -1,3 +1,22 @@
-<p>
-  login works!
-</p>
+<form [formGroup]="sigInForm">
+  <div>
+    <!-- user name input field with form-control attribut to connect to the login component  -->
+    User Name<input type="text" name="userName" id="userName" formControlName="userName" />
+ 
+    <!-- erro message panale to show wither the user name is valid or not get access to the userName filed 
+    form the login conponent using get property UsernameAccessor  -->
+    <div *ngIf="UsernameAccessor.touched && !UsernameAccessor.valid" class="alert alert-danger" >
+    <div *ngIf="UsernameAccessor.errors.required">User name is Required </div>
+    <div *ngIf="UsernameAccessor.errors.space">User name can not have space </div>
+    <div *ngIf="UsernameAccessor.errors.email">User name must be valid  e-mail </div>
+   </div>
+  </div>
+  <div>
+   PassWord<input type="text" name="password" id="password"  formControlName="password" required/>
+   <div *ngIf="password.touched && !password.valid" class="alert alert-danger" >
+     jhjhjh
+       <div *ngIf="password.errors.required"> Password is required </div>
+   </div>
+</div>
+   </form>  
+
